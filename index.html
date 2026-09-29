@@ -1,13 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DopsMind Labs</title>
+
+  <link rel="stylesheet" href="styles.css">
+
+  <!-- Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+
+  <!-- Typed.js -->
+  <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<header class="navbar">
+  <img src="./assets/logo.png" class="logo" alt="DopsMind Labs">
+  <nav>
+    <a href="#services">Services</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
+
+<!-- HERO -->
 <section class="hero">
+
   <div class="hero-left">
     <h1>
-      Build <span>AI-Driven</span><br>
-      DevOps Platforms
+      Build <span id="typed"></span>
     </h1>
 
     <p>
-      We design scalable cloud systems, automate operations,
-      and integrate AI into real-world infrastructure.
+      We design scalable cloud infrastructure, automate operations,
+      and integrate AI into real-world DevOps systems.
     </p>
 
     <div class="cta">
@@ -17,6 +46,85 @@
   </div>
 
   <div class="hero-right">
-    <img src="./assets/logo.png" class="hero-logo"/>
+    <img src="./assets/logo.png" class="hero-logo" alt="logo">
+  </div>
+
+</section>
+
+<!-- SERVICES -->
+<section id="services" class="section">
+  <h2>Core Services</h2>
+
+  <div class="grid">
+    <div class="card">
+      <h3>DevOps Engineering</h3>
+      <p>CI/CD pipelines, automation, and scalable deployments.</p>
+    </div>
+
+    <div class="card">
+      <h3>Cloud Architecture</h3>
+      <p>Secure and scalable systems across AWS, Azure, and GCP.</p>
+    </div>
+
+    <div class="card">
+      <h3>AI Automation</h3>
+      <p>Integrating AI into workflows and infrastructure.</p>
+    </div>
+
+    <div class="card">
+      <h3>AIOps</h3>
+      <p>Monitoring, logging, and intelligent alerting systems.</p>
+    </div>
+
+    <div class="card">
+      <h3>Platform Engineering</h3>
+      <p>Internal developer platforms for faster delivery.</p>
+    </div>
+
+    <div class="card">
+      <h3>DevSecOps</h3>
+      <p>Security automation across pipelines and infrastructure.</p>
+    </div>
   </div>
 </section>
+
+<!-- PROJECTS -->
+<section id="projects" class="section dark">
+  <h2>Projects</h2>
+
+  <div class="grid">
+    <div class="card">
+      <h3>AI Log Analyzer</h3>
+      <p>Automated log insights using AI.</p>
+    </div>
+
+    <div class="card">
+      <h3>CI/CD Automation</h3>
+      <p>Reusable pipelines for fast deployments.</p>
+    </div>
+
+    <div class="card">
+      <h3>Infrastructure as Code</h3>
+      <p>Production-ready Terraform modules.</p>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="section">
+  <h2>Let’s Build Together</h2>
+  <p>Ready to scale your infrastructure?</p>
+
+  <a href="mailto:your@email.com" class="btn primary">
+    Contact Us
+  </a>
+</section>
+
+<footer>
+  <p>© 2026 DopsMind Labs</p>
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>
