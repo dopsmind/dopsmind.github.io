@@ -27,19 +27,29 @@ body {
 }
 
 /* HERO */
+/* HERO FIXED */
 .hero {
+  height: 100vh;
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  padding: 140px 10%;
+  justify-content: center;
+  text-align: center;
+  padding: 0 20px;
 }
 
-.hero-left {
-  max-width: 600px;
+.hero-content {
+  max-width: 700px;
+}
+
+.brand-logo {
+  width: 90px;
+  margin-bottom: 20px;
+  opacity: 0.9;
 }
 
 .hero h1 {
-  font-size: 3.5rem;
+  font-size: 3.2rem;
+  margin-bottom: 20px;
 }
 
 .hero span {
@@ -49,8 +59,9 @@ body {
 }
 
 .hero p {
-  margin-top: 20px;
   color: #94a3b8;
+  margin-bottom: 30px;
+  font-size: 1.1rem;
 }
 
 /* BUTTONS */
