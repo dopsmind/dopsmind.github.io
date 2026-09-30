@@ -1,108 +1,239 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>DopsMind Labs</title>
 
-<link rel="stylesheet" href="styles.css">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
-<script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
 
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Inter', sans-serif;
+}
+
+body {
+  background: #0b0f19;
+  color: #e6edf3;
+}
+
+/* NAVBAR */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 8%;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  background: rgba(11,15,25,0.8);
+  backdrop-filter: blur(10px);
+  z-index: 1000;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo img {
+  width: 45px;
+  height: 45px;
+}
+
+.logo span {
+  font-weight: 600;
+  font-size: 18px;
+}
+
+nav ul {
+  display: flex;
+  gap: 30px;
+  list-style: none;
+}
+
+nav a {
+  text-decoration: none;
+  color: #c9d1d9;
+  font-weight: 500;
+}
+
+nav a:hover {
+  color: #58a6ff;
+}
+
+/* HERO */
+.hero {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 0 20px;
+  background: radial-gradient(circle at top, #1a233a, #0b0f19);
+}
+
+.hero h1 {
+  font-size: 60px;
+  font-weight: 700;
+  background: linear-gradient(90deg, #00d4ff, #7a5cff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.hero p {
+  margin-top: 20px;
+  font-size: 18px;
+  color: #9aa4b2;
+}
+
+.buttons {
+  margin-top: 30px;
+}
+
+.btn {
+  padding: 14px 28px;
+  border-radius: 8px;
+  margin: 10px;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.primary {
+  background: linear-gradient(90deg, #00d4ff, #7a5cff);
+  color: white;
+}
+
+.secondary {
+  background: transparent;
+  border: 1px solid #3b455a;
+  color: #c9d1d9;
+}
+
+/* SERVICES */
+.section {
+  padding: 100px 8%;
+  text-align: center;
+}
+
+.section h2 {
+  font-size: 36px;
+  margin-bottom: 40px;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
+  gap: 25px;
+}
+
+.card {
+  background: #121826;
+  padding: 25px;
+  border-radius: 12px;
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  background: #162038;
+}
+
+/* CASE STUDIES */
+.case {
+  background: #121826;
+  padding: 25px;
+  border-radius: 12px;
+}
+
+/* FOOTER */
+footer {
+  padding: 40px;
+  text-align: center;
+  color: #6e7681;
+}
+
+</style>
 </head>
 
 <body>
 
-<header class="navbar">
-  <div class="nav-left">
-    <img src="./assets/Logo.png" class="logo">
+<!-- NAVBAR -->
+<nav>
+  <div class="logo">
+    <img src="assets/Logo.png" alt="logo">
     <span>DopsMind Labs</span>
   </div>
 
-  <nav>
-    <a href="#services">Services</a>
-    <a href="#case">Case Studies</a>
-    <a href="#contact">Contact</a>
-  </nav>
-</header>
+  <ul>
+    <li><a href="#services">Services</a></li>
+    <li><a href="#cases">Case Studies</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</nav>
 
+<!-- HERO -->
 <section class="hero">
-  <div class="hero-content">
-    <h1>Build <span id="typed"></span></h1>
-    <p>
-      We engineer AI-powered DevOps systems, scalable platforms,
-      and intelligent cloud infrastructure for modern businesses.
-    </p>
-
-    <div class="cta">
-      <a href="#contact" class="btn primary">Start Project</a>
-      <a href="#services" class="btn ghost">Explore</a>
+  <div>
+    <h1>AI + DevOps Engineering</h1>
+    <p>We build scalable, intelligent, and automated cloud platforms.</p>
+    
+    <div class="buttons">
+      <button class="btn primary">Start Project</button>
+      <button class="btn secondary">Explore</button>
     </div>
   </div>
 </section>
 
 <!-- SERVICES -->
 <section id="services" class="section">
-  <h2>Services</h2>
+  <h2>Our Services</h2>
 
-  <div class="grid">
-
-    <div class="card">DevOps Engineering</div>
+  <div class="cards">
     <div class="card">Cloud Architecture</div>
-    <div class="card">AI Automation</div>
-    <div class="card">AIOps Monitoring</div>
-    <div class="card">Platform Engineering</div>
-    <div class="card">DevSecOps</div>
-    <div class="card">MLOps</div>
+    <div class="card">DevOps Automation</div>
+    <div class="card">CI/CD Pipelines</div>
+    <div class="card">AI Integrations</div>
+    <div class="card">Kubernetes Scaling</div>
+    <div class="card">Monitoring & Observability</div>
     <div class="card">Infrastructure as Code</div>
-    <div class="card">FinOps Optimization</div>
-
+    <div class="card">Security & Compliance</div>
   </div>
 </section>
 
 <!-- CASE STUDIES -->
-<section id="case" class="section dark">
+<section id="cases" class="section">
   <h2>Case Studies</h2>
 
-  <div class="grid">
-
-    <div class="card case">
-      <h3>AI Log Intelligence</h3>
-      <p>Reduced incident resolution time by 60% using AI log parsing.</p>
+  <div class="cards">
+    <div class="case">
+      Reduced incident time by 60% using AI logs
     </div>
 
-    <div class="card case">
-      <h3>CI/CD Automation</h3>
-      <p>Cut deployment time from 30 mins → 5 mins.</p>
+    <div class="case">
+      CI/CD cut deployment time from 30 → 5 mins
     </div>
 
-    <div class="card case">
-      <h3>Cloud Scaling System</h3>
-      <p>Auto-scaled infra handling 10x traffic spikes.</p>
+    <div class="case">
+      Scaled infra to handle 10x traffic spikes
     </div>
-
   </div>
 </section>
 
-<!-- PREMIUM CTA -->
-<section id="contact" class="cta-section">
-
-  <div class="cta-box">
-    <h2>Let’s Build Your Platform</h2>
-    <p>Transform your infrastructure with AI + DevOps.</p>
-
-    <a href="mailto:your@email.com" class="btn primary big">
-      Contact Us
-    </a>
-  </div>
-
+<!-- CONTACT -->
+<section id="contact" class="section">
+  <h2>Let’s Build Together</h2>
+  <p>Transform your infrastructure with AI + DevOps</p>
 </section>
 
 <footer>
   © 2026 DopsMind Labs
 </footer>
-
-<script src="script.js"></script>
 
 </body>
 </html>
