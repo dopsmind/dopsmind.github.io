@@ -1,10 +1,11 @@
 new Typed("#typed", {
   strings: [
-    "AI-Driven DevOps",
+    "AI DevOps Systems",
     "Cloud Platforms",
-    "Automation Systems"
+    "Automation Engines",
+    "Scalable Infrastructure"
   ],
-  typeSpeed: 50,
-  backSpeed: 30,
+  typeSpeed: 60,
+  backSpeed: 40,
   loop: true
 });
