@@ -1,170 +1,105 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>DopsMind Labs</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DopsMind Labs</title>
 
-  <link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="styles.css">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+<script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
 
-  <!-- Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
-
-  <!-- Typed -->
-  <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
 </head>
 
 <body>
 
-<!-- NAVBAR -->
 <header class="navbar">
   <div class="nav-left">
     <img src="./assets/Logo.png" class="logo">
-    <span class="brand">DopsMind Labs</span>
+    <span>DopsMind Labs</span>
   </div>
 
   <nav>
     <a href="#services">Services</a>
-    <a href="#platform">Platform</a>
-    <a href="#projects">Projects</a>
+    <a href="#case">Case Studies</a>
     <a href="#contact">Contact</a>
   </nav>
 </header>
 
-<!-- HERO -->
 <section class="hero">
-
   <div class="hero-content">
-    <h1>
-      Build <span id="typed"></span>
-    </h1>
-
+    <h1>Build <span id="typed"></span></h1>
     <p>
-      We design scalable cloud platforms, automate DevOps workflows,
-      and integrate AI to create intelligent infrastructure systems.
+      We engineer AI-powered DevOps systems, scalable platforms,
+      and intelligent cloud infrastructure for modern businesses.
     </p>
 
     <div class="cta">
-      <a href="#contact" class="btn primary">Start a Project</a>
-      <a href="#services" class="btn ghost">Explore Services</a>
+      <a href="#contact" class="btn primary">Start Project</a>
+      <a href="#services" class="btn ghost">Explore</a>
     </div>
-  </div>
-
-</section>
-
-<!-- TRUST / STACK -->
-<section class="section trust">
-  <p>Technologies we work with</p>
-  <div class="stack">
-    <span>AWS</span>
-    <span>Kubernetes</span>
-    <span>Docker</span>
-    <span>Terraform</span>
-    <span>Python</span>
-    <span>OpenAI</span>
   </div>
 </section>
 
 <!-- SERVICES -->
 <section id="services" class="section">
-  <h2>Enterprise DevOps & AI Services</h2>
+  <h2>Services</h2>
 
   <div class="grid">
 
-    <div class="card">
-      <h3>DevOps Engineering</h3>
-      <p>CI/CD pipelines, automation, and scalable deployments.</p>
-    </div>
-
-    <div class="card">
-      <h3>Cloud Architecture</h3>
-      <p>Secure, scalable cloud systems across AWS, Azure, and GCP.</p>
-    </div>
-
-    <div class="card">
-      <h3>AI Automation</h3>
-      <p>Integrating AI into infrastructure and workflows.</p>
-    </div>
-
-    <div class="card">
-      <h3>AIOps</h3>
-      <p>Intelligent monitoring, anomaly detection, and alerting.</p>
-    </div>
-
-    <div class="card">
-      <h3>Platform Engineering</h3>
-      <p>Internal developer platforms and self-service infrastructure.</p>
-    </div>
-
-    <div class="card">
-      <h3>DevSecOps</h3>
-      <p>Security automation integrated into pipelines.</p>
-    </div>
-
-    <div class="card">
-      <h3>Infrastructure as Code</h3>
-      <p>Terraform-based reproducible infrastructure systems.</p>
-    </div>
-
-    <div class="card">
-      <h3>MLOps</h3>
-      <p>Deploy, monitor, and scale machine learning systems.</p>
-    </div>
-
-    <div class="card">
-      <h3>FinOps</h3>
-      <p>Cloud cost optimization and resource efficiency.</p>
-    </div>
+    <div class="card">DevOps Engineering</div>
+    <div class="card">Cloud Architecture</div>
+    <div class="card">AI Automation</div>
+    <div class="card">AIOps Monitoring</div>
+    <div class="card">Platform Engineering</div>
+    <div class="card">DevSecOps</div>
+    <div class="card">MLOps</div>
+    <div class="card">Infrastructure as Code</div>
+    <div class="card">FinOps Optimization</div>
 
   </div>
 </section>
 
-<!-- PLATFORM -->
-<section id="platform" class="section dark">
-  <h2>How We Build Systems</h2>
-
-  <div class="steps">
-    <div>01. Assess</div>
-    <div>02. Design</div>
-    <div>03. Automate</div>
-    <div>04. Scale</div>
-  </div>
-</section>
-
-<!-- PROJECTS -->
-<section id="projects" class="section">
-  <h2>Selected Work</h2>
+<!-- CASE STUDIES -->
+<section id="case" class="section dark">
+  <h2>Case Studies</h2>
 
   <div class="grid">
 
-    <div class="card">
-      <h3>AI Log Analyzer</h3>
-      <p>Automated log insights with anomaly detection.</p>
+    <div class="card case">
+      <h3>AI Log Intelligence</h3>
+      <p>Reduced incident resolution time by 60% using AI log parsing.</p>
     </div>
 
-    <div class="card">
-      <h3>CI/CD Automation Suite</h3>
-      <p>Reusable pipelines reducing deployment time.</p>
+    <div class="card case">
+      <h3>CI/CD Automation</h3>
+      <p>Cut deployment time from 30 mins → 5 mins.</p>
     </div>
 
-    <div class="card">
-      <h3>Cloud Foundation</h3>
-      <p>Production-ready cloud architecture templates.</p>
+    <div class="card case">
+      <h3>Cloud Scaling System</h3>
+      <p>Auto-scaled infra handling 10x traffic spikes.</p>
     </div>
 
   </div>
 </section>
 
-<!-- CONTACT -->
-<section id="contact" class="section dark">
-  <h2>Let’s Build Your Platform</h2>
-  <p>Start your DevOps and AI transformation today.</p>
+<!-- PREMIUM CTA -->
+<section id="contact" class="cta-section">
 
-  <a href="mailto:your@email.com" class="btn primary">Contact Us</a>
+  <div class="cta-box">
+    <h2>Let’s Build Your Platform</h2>
+    <p>Transform your infrastructure with AI + DevOps.</p>
+
+    <a href="mailto:your@email.com" class="btn primary big">
+      Contact Us
+    </a>
+  </div>
+
 </section>
 
 <footer>
-  <p>© 2026 DopsMind Labs</p>
+  © 2026 DopsMind Labs
 </footer>
 
 <script src="script.js"></script>
