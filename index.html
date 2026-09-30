@@ -7,20 +7,25 @@
 
   <link rel="stylesheet" href="styles.css">
 
-  <!-- Font -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
 
-  <!-- Typed.js -->
+  <!-- Typed -->
   <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
 </head>
 
 <body>
 
-<!-- NAVBAR. -->
+<!-- NAVBAR -->
 <header class="navbar">
-  <img src="./assets/Logo.png" class="logo" alt="DopsMind Labs">
+  <div class="nav-left">
+    <img src="./assets/Logo.png" class="logo">
+    <span class="brand">DopsMind Labs</span>
+  </div>
+
   <nav>
     <a href="#services">Services</a>
+    <a href="#platform">Platform</a>
     <a href="#projects">Projects</a>
     <a href="#contact">Contact</a>
   </nav>
@@ -30,32 +35,42 @@
 <section class="hero">
 
   <div class="hero-content">
-
-    <img src="./assets/Logo.png" class="brand-logo" alt="DopsMind Labs">
-
     <h1>
       Build <span id="typed"></span>
     </h1>
 
     <p>
-      We design scalable cloud infrastructure, automate operations,
-      and integrate AI into real-world DevOps systems.
+      We design scalable cloud platforms, automate DevOps workflows,
+      and integrate AI to create intelligent infrastructure systems.
     </p>
 
     <div class="cta">
-      <a href="#services" class="btn primary">Get Started</a>
-      <a href="#projects" class="btn ghost">View Work</a>
+      <a href="#contact" class="btn primary">Start a Project</a>
+      <a href="#services" class="btn ghost">Explore Services</a>
     </div>
-
   </div>
 
 </section>
 
+<!-- TRUST / STACK -->
+<section class="section trust">
+  <p>Technologies we work with</p>
+  <div class="stack">
+    <span>AWS</span>
+    <span>Kubernetes</span>
+    <span>Docker</span>
+    <span>Terraform</span>
+    <span>Python</span>
+    <span>OpenAI</span>
+  </div>
+</section>
+
 <!-- SERVICES -->
 <section id="services" class="section">
-  <h2>Core Services</h2>
+  <h2>Enterprise DevOps & AI Services</h2>
 
   <div class="grid">
+
     <div class="card">
       <h3>DevOps Engineering</h3>
       <p>CI/CD pipelines, automation, and scalable deployments.</p>
@@ -63,61 +78,89 @@
 
     <div class="card">
       <h3>Cloud Architecture</h3>
-      <p>Secure and scalable systems across AWS, Azure, and GCP.</p>
+      <p>Secure, scalable cloud systems across AWS, Azure, and GCP.</p>
     </div>
 
     <div class="card">
       <h3>AI Automation</h3>
-      <p>Integrating AI into workflows and infrastructure.</p>
+      <p>Integrating AI into infrastructure and workflows.</p>
     </div>
 
     <div class="card">
       <h3>AIOps</h3>
-      <p>Monitoring, logging, and intelligent alerting systems.</p>
+      <p>Intelligent monitoring, anomaly detection, and alerting.</p>
     </div>
 
     <div class="card">
       <h3>Platform Engineering</h3>
-      <p>Internal developer platforms for faster delivery.</p>
+      <p>Internal developer platforms and self-service infrastructure.</p>
     </div>
 
     <div class="card">
       <h3>DevSecOps</h3>
-      <p>Security automation across pipelines and infrastructure.</p>
-    </div>
-  </div>
-</section>
-
-<!-- PROJECTS -->
-<section id="projects" class="section dark">
-  <h2>Projects</h2>
-
-  <div class="grid">
-    <div class="card">
-      <h3>AI Log Analyzer</h3>
-      <p>Automated log insights using AI.</p>
-    </div>
-
-    <div class="card">
-      <h3>CI/CD Automation</h3>
-      <p>Reusable pipelines for fast deployments.</p>
+      <p>Security automation integrated into pipelines.</p>
     </div>
 
     <div class="card">
       <h3>Infrastructure as Code</h3>
-      <p>Production-ready Terraform modules.</p>
+      <p>Terraform-based reproducible infrastructure systems.</p>
     </div>
+
+    <div class="card">
+      <h3>MLOps</h3>
+      <p>Deploy, monitor, and scale machine learning systems.</p>
+    </div>
+
+    <div class="card">
+      <h3>FinOps</h3>
+      <p>Cloud cost optimization and resource efficiency.</p>
+    </div>
+
+  </div>
+</section>
+
+<!-- PLATFORM -->
+<section id="platform" class="section dark">
+  <h2>How We Build Systems</h2>
+
+  <div class="steps">
+    <div>01. Assess</div>
+    <div>02. Design</div>
+    <div>03. Automate</div>
+    <div>04. Scale</div>
+  </div>
+</section>
+
+<!-- PROJECTS -->
+<section id="projects" class="section">
+  <h2>Selected Work</h2>
+
+  <div class="grid">
+
+    <div class="card">
+      <h3>AI Log Analyzer</h3>
+      <p>Automated log insights with anomaly detection.</p>
+    </div>
+
+    <div class="card">
+      <h3>CI/CD Automation Suite</h3>
+      <p>Reusable pipelines reducing deployment time.</p>
+    </div>
+
+    <div class="card">
+      <h3>Cloud Foundation</h3>
+      <p>Production-ready cloud architecture templates.</p>
+    </div>
+
   </div>
 </section>
 
 <!-- CONTACT -->
-<section id="contact" class="section">
-  <h2>Let’s Build Together</h2>
-  <p>Ready to scale your infrastructure?</p>
+<section id="contact" class="section dark">
+  <h2>Let’s Build Your Platform</h2>
+  <p>Start your DevOps and AI transformation today.</p>
 
-  <a href="mailto:your@email.com" class="btn primary">
-    Contact Us
-  </a>
+  <a href="mailto:your@email.com" class="btn primary">Contact Us</a>
 </section>
 
 <footer>
