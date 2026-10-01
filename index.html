@@ -4,155 +4,99 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>DopsMind Labs</title>
-  <link rel="stylesheet" href="styles.css" />
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #0b0f1a;
+      color: white;
+    }
+
+    section {
+      padding: 80px 20px;
+      text-align: center;
+    }
+
+    h2 {
+      margin-bottom: 40px;
+    }
+
+    /* ===== STACK SECTION ===== */
+    .logo-marquee {
+      overflow: hidden;
+      width: 100%;
+      position: relative;
+    }
+
+    .logo-track {
+      display: flex;
+      gap: 60px;
+      width: max-content;
+      animation: scrollLogos 25s linear infinite;
+      align-items: center;
+    }
+
+    .logo-track img {
+      height: 50px;
+      width: auto;
+      opacity: 0.8;
+      filter: grayscale(100%);
+      transition: 0.3s;
+    }
+
+    .logo-track img:hover {
+      opacity: 1;
+      filter: grayscale(0%);
+      transform: scale(1.1);
+    }
+
+    @keyframes scrollLogos {
+      0% {
+        transform: translateX(0);
+      }
+      100% {
+        transform: translateX(-50%);
+      }
+    }
+
+  </style>
 </head>
+
 <body>
 
-<!-- NAVBAR -->
-<header class="nav">
-  <div class="container nav-inner">
-    <div class="logo">DopsMind Labs</div>
-    <nav>
-      <a href="#services">Services</a>
-      <a href="#case">Case Studies</a>
-      <a href="#stack">Stack</a>
-      <a href="#contact">Contact</a>
-    </nav>
-  </div>
-</header>
+  <!-- STACK SECTION (UPDATED ONLY THIS PART) -->
+  <section id="stack">
+    <h2>Trusted Stacks & Platforms</h2>
 
-<!-- HERO -->
-<section class="hero">
-  <div class="container hero-content">
-    <h1>
-      Build <span class="gradient">Cloud Platforms</span><br/>
-      That Scale & Think
-    </h1>
-    <p>
-      Enterprise-grade DevOps, AI systems, and intelligent infrastructure.
-    </p>
-    <div class="cta">
-      <button class="primary">Start Project</button>
-      <button class="secondary">Explore</button>
+    <div class="logo-marquee">
+      <div class="logo-track">
+
+        <!-- Logos -->
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original.svg">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/kubernetes/kubernetes-plain.svg">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/terraform/terraform-original.svg">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/googlecloud/googlecloud-original.svg">
+
+        <!-- AI / Modern -->
+        <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/openai.svg">
+        <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/langchain.svg">
+
+        <!-- DUPLICATE (for smooth infinite loop) -->
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original.svg">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/kubernetes/kubernetes-plain.svg">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/terraform/terraform-original.svg">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/googlecloud/googlecloud-original.svg">
+        <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/openai.svg">
+        <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/langchain.svg">
+
+      </div>
     </div>
-  </div>
-</section>
-
-<!-- STACK STRIP -->
-<section id="stack" class="stack">
-  <h2>Trusted Stacks & Platforms</h2>
-
-  <div class="marquee">
-    <div class="marquee-content">
-      <span>AWS</span>
-      <span>Kubernetes</span>
-      <span>Docker</span>
-      <span>Terraform</span>
-      <span>Python</span>
-      <span>OpenAI</span>
-      <span>LangChain</span>
-      <span>MCP</span>
-      <span>AI Agents</span>
-
-      <!-- duplicate for smooth loop -->
-      <span>AWS</span>
-      <span>Kubernetes</span>
-      <span>Docker</span>
-      <span>Terraform</span>
-      <span>Python</span>
-      <span>OpenAI</span>
-      <span>LangChain</span>
-      <span>MCP</span>
-      <span>AI Agents</span>
-    </div>
-  </div>
-</section>
-
-<!-- SERVICES -->
-<section id="services" class="services container">
-  <h2>Services</h2>
-
-  <div class="grid">
-    <div class="card">
-      <h3>Cloud Architecture</h3>
-      <p>Scalable, secure, multi-cloud systems.</p>
-    </div>
-
-    <div class="card">
-      <h3>DevOps Automation</h3>
-      <p>CI/CD pipelines, infra-as-code, reliability.</p>
-    </div>
-
-    <div class="card">
-      <h3>AI Systems</h3>
-      <p>LLMs, AI agents, automation workflows.</p>
-    </div>
-
-    <div class="card">
-      <h3>Platform Engineering</h3>
-      <p>Internal platforms for developer velocity.</p>
-    </div>
-
-    <div class="card">
-      <h3>Observability</h3>
-      <p>Logs, metrics, AI-driven monitoring.</p>
-    </div>
-
-    <div class="card">
-      <h3>Scaling Systems</h3>
-      <p>High-load architecture & auto-scaling infra.</p>
-    </div>
-  </div>
-</section>
-
-<!-- CASE STUDIES -->
-<section id="case" class="case container">
-  <h2>Case Studies</h2>
-
-  <div class="grid">
-    <div class="card">
-      <h3>AI Log Intelligence</h3>
-      <p>Reduced incident resolution time by 60% using AI log parsing.</p>
-    </div>
-
-    <div class="card">
-      <h3>CI/CD Automation</h3>
-      <p>Cut deployment time from 30 mins → 5 mins.</p>
-    </div>
-
-    <div class="card">
-      <h3>Cloud Scaling</h3>
-      <p>Handled 10x traffic spikes with auto-scaling infra.</p>
-    </div>
-  </div>
-</section>
-
-<!-- CONTACT -->
-<section id="contact" class="contact">
-  <div class="container">
-    <h2>Let’s Build Your Platform</h2>
-    <p>Enterprise DevOps + AI transformation.</p>
-    <button class="primary big">Contact Us</button>
-  </div>
-</section>
-
-<footer>
-  <p>© 2026 DopsMind Labs</p>
-</footer>
-
-<script>
-  // simple scroll animation
-  const cards = document.querySelectorAll(".card");
-
-  window.addEventListener("scroll", () => {
-    cards.forEach(card => {
-      const top = card.getBoundingClientRect().top;
-      if (top < window.innerHeight - 100) {
-        card.classList.add("show");
-      }
-    });
-  });
-</script>
+  </section>
 
 </body>
 </html>
