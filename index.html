@@ -1,102 +1,224 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>DopsMind Labs</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>DopsMind Labs — AI · DevOps · Cloud</title>
 
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background: #0b0f1a;
-      color: white;
-    }
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
 
-    section {
-      padding: 80px 20px;
-      text-align: center;
-    }
+  <!-- Core styles -->
+  <link rel="stylesheet" href="styles.css" />
 
-    h2 {
-      margin-bottom: 40px;
-    }
+  <!-- Typed (hero animated headline) -->
+  <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js" defer></script>
 
-    /* ===== STACK SECTION ===== */
-    .logo-marquee {
-      overflow: hidden;
-      width: 100%;
-      position: relative;
-    }
-
-    .logo-track {
-      display: flex;
-      gap: 60px;
-      width: max-content;
-      animation: scrollLogos 25s linear infinite;
-      align-items: center;
-    }
-
-    .logo-track img {
-      height: 50px;
-      width: auto;
-      opacity: 0.8;
-      filter: grayscale(100%);
-      transition: 0.3s;
-    }
-
-    .logo-track img:hover {
-      opacity: 1;
-      filter: grayscale(0%);
-      transform: scale(1.1);
-    }
-
-    @keyframes scrollLogos {
-      0% {
-        transform: translateX(0);
-      }
-      100% {
-        transform: translateX(-50%);
-      }
-    }
-
-  </style>
+  <!-- AOS fallback: we'll implement a tiny intersection observer in script.js; no external AOS required -->
 </head>
-
 <body>
 
-  <!-- STACK SECTION (UPDATED ONLY THIS PART) -->
-  <section id="stack">
-    <h2>Trusted Stacks & Platforms</h2>
+  <!-- NAV -->
+  <header class="site-header" role="banner">
+    <div class="container header-inner">
+      <a class="brand" href="/">
+        <img src="assets/Logo.png" alt="DopsMind Labs logo" class="brand-logo" />
+        <span class="brand-name">DopsMind Labs</span>
+      </a>
 
-    <div class="logo-marquee">
-      <div class="logo-track">
+      <nav class="site-nav" aria-label="Primary">
+        <a href="#services">Services</a>
+        <a href="#case-studies">Case Studies</a>
+        <a href="#metrics">Metrics</a>
+        <a href="#contact" class="nav-cta">Contact</a>
+      </nav>
 
-        <!-- Logos -->
-        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original.svg">
-        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/kubernetes/kubernetes-plain.svg">
-        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg">
-        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/terraform/terraform-original.svg">
-        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg">
-        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/googlecloud/googlecloud-original.svg">
+      <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">☰</button>
+    </div>
+  </header>
 
-        <!-- AI / Modern -->
-        <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/openai.svg">
-        <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/langchain.svg">
+  <!-- HERO -->
+  <main>
+    <section class="hero" id="hero">
+      <div class="container hero-inner">
+        <div class="hero-copy">
+          <p class="eyebrow">AI · DevOps · Cloud</p>
+          <h1 class="hero-title">Engineering <span id="typed"></span></h1>
+          <p class="hero-sub">
+            We design and operate enterprise-grade cloud platforms, automate delivery pipelines, and embed AI to make systems self-healing and efficient.
+          </p>
 
-        <!-- DUPLICATE (for smooth infinite loop) -->
-        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original.svg">
-        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/kubernetes/kubernetes-plain.svg">
-        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg">
-        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/terraform/terraform-original.svg">
-        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg">
-        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/googlecloud/googlecloud-original.svg">
-        <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/openai.svg">
-        <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/langchain.svg">
+          <div class="hero-ctas">
+            <a class="btn primary" href="#contact">Start a Project</a>
+            <a class="btn ghost" href="#case-studies">See Case Studies</a>
+          </div>
+        </div>
 
+        <div class="hero-visual" aria-hidden="true">
+          <!-- simple animated system mockup (CSS only) -->
+          <div class="mockup">
+            <div class="node n1"></div>
+            <div class="node n2"></div>
+            <div class="node n3"></div>
+            <svg class="connections" viewBox="0 0 200 200" preserveAspectRatio="none">
+              <path d="M20,150 C70,90 130,110 180,50" />
+            </svg>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TRUST + STACK -->
+    <section class="trust container" id="tech">
+      <div class="trust-inner">
+        <p class="trust-eyebrow">Trusted stacks & platforms</p>
+        <div class="stack-logos" role="list">
+          <div class="stack">AWS</div>
+          <div class="stack">Kubernetes</div>
+          <div class="stack">Docker</div>
+          <div class="stack">Terraform</div>
+          <div class="stack">Python</div>
+          <div class="stack">OpenAI</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SERVICES -->
+    <section id="services" class="section container">
+      <h2 class="section-title">Enterprise DevOps & AI Services</h2>
+
+      <div class="cards grid-3">
+        <article class="card" data-animate>
+          <h3>DevOps Engineering</h3>
+          <p>Design and deliver repeatable CI/CD that scales with your teams.</p>
+        </article>
+
+        <article class="card" data-animate>
+          <h3>Cloud Architecture</h3>
+          <p>Resilient multi-cloud and hybrid cloud design (AWS / GCP / Azure).</p>
+        </article>
+
+        <article class="card" data-animate>
+          <h3>AI Automation</h3>
+          <p>Embed LLM agents and AI workflows for observability and automation.</p>
+        </article>
+
+        <article class="card" data-animate>
+          <h3>AIOps & Observability</h3>
+          <p>Intelligent alerting, anomaly detection and root-cause analysis.</p>
+        </article>
+
+        <article class="card" data-animate>
+          <h3>Platform Engineering</h3>
+          <p>Internal developer platforms to speed delivery and reduce toil.</p>
+        </article>
+
+        <article class="card" data-animate>
+          <h3>DevSecOps & Compliance</h3>
+          <p>Security automation, policy-as-code and continuous compliance.</p>
+        </article>
+
+        <article class="card" data-animate>
+          <h3>MLOps</h3>
+          <p>Reproducible model deployments and monitoring for production ML.</p>
+        </article>
+
+        <article class="card" data-animate>
+          <h3>Infrastructure as Code</h3>
+          <p>Production-ready Terraform modules and IaC best practices.</p>
+        </article>
+
+        <article class="card" data-animate>
+          <h3>FinOps</h3>
+          <p>Cloud cost optimization and resource efficiency engineering.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- CASE STUDIES -->
+    <section id="case-studies" class="section dark">
+      <div class="container">
+        <h2 class="section-title">Selected Case Studies</h2>
+
+        <div class="grid-3 cards">
+          <div class="case card" data-animate>
+            <div class="case-inner">
+              <h3>AI Log Intelligence</h3>
+              <p class="muted">Problem — noisy alerts and long MTTR</p>
+              <p>We integrated log parsing pipelines + LLM summarization. Result: 60% faster incident detection and 50% lower noise.</p>
+              <p class="case-meta">Technologies: ELK, OpenAI, Prometheus</p>
+            </div>
+          </div>
+
+          <div class="case card" data-animate>
+            <div class="case-inner">
+              <h3>CI/CD Automation</h3>
+              <p class="muted">Problem — slow and brittle deployments</p>
+              <p>Built standardized, templated pipelines + automated checks. Result: median deployment time reduced from 30 → 5 minutes.</p>
+              <p class="case-meta">Technologies: GitHub Actions, Terraform, Kubernetes</p>
+            </div>
+          </div>
+
+          <div class="case card" data-animate>
+            <div class="case-inner">
+              <h3>Cloud Scaling System</h3>
+              <p class="muted">Problem — frequent capacity issues during spikes</p>
+              <p>Implemented predictive auto-scaling with cost-aware policies. Result: handled 10x traffic spikes with 20% cost savings.</p>
+              <p class="case-meta">Technologies: AWS AutoScaling, Prometheus, Python</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- METRICS -->
+    <section id="metrics" class="section container">
+      <h2 class="section-title">Impact at a glance</h2>
+
+      <div class="metrics grid-4">
+        <div class="metric" data-animate>
+          <div class="metric-value" data-count="10">0</div>
+          <div class="metric-label">Years experience</div>
+        </div>
+
+        <div class="metric" data-animate>
+          <div class="metric-value" data-count="99.9">0</div>
+          <div class="metric-label">% uptime (typical)</div>
+        </div>
+
+        <div class="metric" data-animate>
+          <div class="metric-value" data-count="60">0</div>
+          <div class="metric-label">% faster MTTR</div>
+        </div>
+
+        <div class="metric" data-animate>
+          <div class="metric-value" data-count="10">0</div>
+          <div class="metric-label">x scale in spikes</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT (premium CTA) -->
+    <section id="contact" class="section cta-section dark">
+      <div class="container cta-wrap">
+        <div class="cta-card" data-animate>
+          <h2>Let’s build your platform</h2>
+          <p class="muted">We work with engineering and platform teams to deliver production-grade systems — fast.</p>
+          <a class="btn primary big" href="mailto:your@email.com">Contact Us</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-inner">
+        <div>© 2026 DopsMind Labs</div>
+        <div class="muted">Built with care · DevOps · AI</div>
       </div>
     </div>
-  </section>
+  </footer>
 
+  <script src="script.js" defer></script>
 </body>
 </html>
