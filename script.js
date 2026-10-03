@@ -1,5 +1,14 @@
 // HERO typed headline
 document.addEventListener('DOMContentLoaded', function(){
+  document.querySelectorAll('.stack-marquee-track').forEach(track=>{
+    const group = track.querySelector('.stack-marquee-group');
+    if(group){
+      const clone = group.cloneNode(true);
+      clone.setAttribute('aria-hidden', 'true');
+      track.appendChild(clone);
+    }
+  });
+
   try {
     new Typed('#typed', {
       strings: ['Cloud Platforms', 'AI-Driven DevOps', 'Automation Engines', 'Scalable Infrastructure'],
@@ -53,7 +62,7 @@ document.addEventListener('DOMContentLoaded', function(){
   document.querySelectorAll('[data-animate]').forEach(el=> io2.observe(el));
 
   // metrics count-up (simple)
-  document.querySelectorAll('.metric-value').forEach(el=>{
+  document.querySelectorAll('.metric-value[data-count]').forEach(el=>{
     const to = parseFloat(el.getAttribute('data-count') || el.textContent) || 0;
     let start = 0;
     const dur = 900;

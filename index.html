@@ -10,6 +10,7 @@
 
   <!-- Core styles -->
   <link rel="stylesheet" href="styles.css" />
+  <link rel="icon" type="image/png" href="assets/Brain%20Gear%20AI%20Emblem.png" />
 
   <!-- Typed (hero animated headline) -->
   <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js" defer></script>
@@ -22,7 +23,7 @@
   <header class="site-header" role="banner">
     <div class="container header-inner">
       <a class="brand" href="/">
-        <img src="assets/Logo.png" alt="DopsMind Labs logo" class="brand-logo" />
+        <img src="assets/Brain%20Gear%20AI%20Emblem.png" alt="" class="brand-logo" />
         <span class="brand-name">DopsMind Labs</span>
       </a>
 
@@ -40,6 +41,53 @@
   <!-- HERO -->
   <main>
     <section class="hero" id="hero">
+      <div class="hero-backdrop" aria-hidden="true">
+        <svg viewBox="0 0 1440 900" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <linearGradient id="network-line" x1="0" y1="0" x2="1" y2="1">
+              <stop stop-color="#4a78ff" stop-opacity=".05" />
+              <stop offset=".52" stop-color="#4a78ff" stop-opacity=".48" />
+              <stop offset="1" stop-color="#8bd450" stop-opacity=".22" />
+            </linearGradient>
+            <radialGradient id="network-node">
+              <stop stop-color="#dbeafe" />
+              <stop offset=".38" stop-color="#4a78ff" />
+              <stop offset="1" stop-color="#4a78ff" stop-opacity="0" />
+            </radialGradient>
+          </defs>
+          <g fill="none" stroke="url(#network-line)" stroke-width="1.2">
+            <path class="signal-line" d="M-40 260 155 185l170 95 165-145 180 105 170-90 180 120 170-95 190 105" />
+            <path class="signal-line" d="M-30 610 145 510l175 115 160-125 185 110 165-155 190 130 175-110 250 100" />
+            <path class="signal-line" d="M155 185 145 510m180-230 0 345m165-490-5 365m185-260 0 385m170-475-5 320m185-200 5 355m175-450 0 340" />
+            <path class="signal-line" d="M325 280 480 540l185-40 165-260 185 240 175-225" />
+            <path class="signal-line" d="M145 510 325 280m150 495 190-275 165 105 185-225 180 280 160-180" />
+          </g>
+          <g fill="url(#network-node)">
+            <circle class="network-node" cx="155" cy="185" r="15" />
+            <circle class="network-node" cx="325" cy="280" r="18" />
+            <circle class="network-node" cx="490" cy="135" r="14" />
+            <circle class="network-node" cx="670" cy="240" r="19" />
+            <circle class="network-node network-node--green" cx="840" cy="150" r="16" />
+            <circle class="network-node" cx="1020" cy="270" r="20" />
+            <circle class="network-node network-node--green" cx="1200" cy="175" r="15" />
+            <circle class="network-node" cx="145" cy="510" r="16" />
+            <circle class="network-node network-node--green" cx="320" cy="625" r="18" />
+            <circle class="network-node" cx="480" cy="500" r="15" />
+            <circle class="network-node" cx="665" cy="610" r="19" />
+            <circle class="network-node" cx="830" cy="455" r="14" />
+            <circle class="network-node network-node--green" cx="1020" cy="585" r="18" />
+            <circle class="network-node" cx="1195" cy="475" r="16" />
+          </g>
+          <g fill="#b7c9ed" font-family="Inter, sans-serif" font-size="12" letter-spacing="2" opacity=".48">
+            <text x="95" y="150">AI / ML</text>
+            <text x="372" y="238">CI / CD</text>
+            <text x="790" y="110">CLOUD</text>
+            <text x="1100" y="230">OBSERVABILITY</text>
+            <text x="220" y="690">INFRASTRUCTURE AS CODE</text>
+            <text x="920" y="665">AUTOMATION</text>
+          </g>
+        </svg>
+      </div>
       <div class="container hero-inner">
         <div class="hero-copy">
           <p class="eyebrow">AI · DevOps · Cloud</p>
@@ -53,149 +101,287 @@
             <a class="btn ghost" href="#case-studies">See Case Studies</a>
           </div>
         </div>
-
-        <div class="hero-visual" aria-hidden="true">
-          <!-- simple animated system mockup (CSS only) -->
-          <div class="mockup">
-            <div class="node n1"></div>
-            <div class="node n2"></div>
-            <div class="node n3"></div>
-            <svg class="connections" viewBox="0 0 200 200" preserveAspectRatio="none">
-              <path d="M20,150 C70,90 130,110 180,50" />
-            </svg>
-          </div>
-        </div>
       </div>
     </section>
 
     <!-- TRUST + STACK -->
     <section class="trust container" id="tech">
       <div class="trust-inner">
-        <p class="trust-eyebrow">Trusted stacks & platforms</p>
-        <div class="stack-logos" role="list">
-          <div class="stack">AWS</div>
-          <div class="stack">Kubernetes</div>
-          <div class="stack">Docker</div>
-          <div class="stack">Terraform</div>
-          <div class="stack">Python</div>
-          <div class="stack">OpenAI</div>
+        <p class="trust-eyebrow">Enterprise AI, DevOps &amp; operations ecosystem</p>
+        <p class="trust-subtitle">Representative tools across AI, cloud, DevOps, and enterprise systems.</p>
+        <div class="stack-marquees" aria-label="Technology ecosystem">
+          <div class="stack-marquee">
+            <div class="stack-marquee-viewport">
+              <div class="stack-marquee-track stack-marquee-track--left" aria-label="AI and automation tools">
+                <div class="stack-marquee-group" role="list" aria-label="AI and automation tools">
+                  <div class="stack stack--inverse-logo" role="listitem" aria-label="OpenAI" title="OpenAI"><img src="https://cdn.jsdelivr.net/npm/simple-icons@15.15.0/icons/openai.svg" alt="" loading="lazy"></div>
+                  <div class="stack" role="listitem" aria-label="Claude" title="Claude"><img src="https://cdn.simpleicons.org/claude/D97757" alt="" loading="lazy"></div>
+                  <div class="stack" role="listitem" aria-label="Google Gemini" title="Google Gemini"><img src="https://cdn.simpleicons.org/googlegemini/8E75B2" alt="" loading="lazy"></div>
+                  <div class="stack" role="listitem" aria-label="n8n" title="n8n"><img src="https://cdn.simpleicons.org/n8n/EA4B71" alt="" loading="lazy"></div>
+                  <div class="stack" role="listitem" aria-label="Model Context Protocol" title="Model Context Protocol"><img src="https://modelcontextprotocol.io/favicon.svg" alt="" loading="lazy"></div>
+                  <div class="stack stack--wordmark stack--inverse-logo" role="listitem" aria-label="Glean" title="Glean"><img src="https://cdn.prod.website-files.com/6127a84dfe068e153ef20572/63f382fd40bd5b4e4e92b242_Logo.svg" alt="" loading="lazy"></div>
+                  <div class="stack" role="listitem" aria-label="OpenClaw" title="OpenClaw"><img src="https://openclaw.ai/favicon.svg" alt="" loading="lazy"></div>
+                  <div class="stack" role="listitem" aria-label="Cursor" title="Cursor"><img src="https://cdn.simpleicons.org/cursor/FFFFFF" alt="" loading="lazy"></div>
+                  <div class="stack" role="listitem" aria-label="GitHub Copilot" title="GitHub Copilot"><img src="https://cdn.jsdelivr.net/npm/simple-icons@15.15.0/icons/githubcopilot.svg" alt="" loading="lazy"></div>
+                  <div class="stack" role="listitem" aria-label="LangChain" title="LangChain"><img src="https://cdn.simpleicons.org/langchain/A5D6C6" alt="" loading="lazy"></div>
+                  <div class="stack" role="listitem" aria-label="Hugging Face" title="Hugging Face"><img src="https://cdn.simpleicons.org/huggingface/FFD21E" alt="" loading="lazy"></div>
+                  <div class="stack" role="listitem" aria-label="DeepSeek" title="DeepSeek"><img src="https://cdn.simpleicons.org/deepseek/4D6BFE" alt="" loading="lazy"></div>
+                  <div class="stack" role="listitem" aria-label="Perplexity" title="Perplexity"><img src="https://cdn.simpleicons.org/perplexity/1FB8CD" alt="" loading="lazy"></div>
+                  <div class="stack" role="listitem" aria-label="Ollama" title="Ollama"><img src="https://cdn.simpleicons.org/ollama/FFFFFF" alt="" loading="lazy"></div>
+                  <div class="stack" role="listitem" aria-label="Zapier" title="Zapier"><img src="https://cdn.simpleicons.org/zapier/FF4F00" alt="" loading="lazy"></div>
+                  <div class="stack" role="listitem" aria-label="Make" title="Make"><img src="https://cdn.simpleicons.org/make/6D00CC" alt="" loading="lazy"></div>
+                  <div class="stack" role="listitem" aria-label="PyTorch" title="PyTorch"><img src="https://cdn.simpleicons.org/pytorch/EE4C2C" alt="" loading="lazy"></div>
+                  <div class="stack" role="listitem" aria-label="TensorFlow" title="TensorFlow"><img src="https://cdn.simpleicons.org/tensorflow/FF6F00" alt="" loading="lazy"></div>
+                  <div class="stack" role="listitem" aria-label="Weights &amp; Biases" title="Weights &amp; Biases"><img src="https://cdn.simpleicons.org/weightsandbiases/FFBE00" alt="" loading="lazy"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="stack-marquee">
+            <div class="stack-marquee-viewport">
+              <div class="stack-marquee-track stack-marquee-track--right" aria-label="Enterprise, cloud, and DevOps platforms">
+                <div class="stack-marquee-group" role="list" aria-label="Enterprise, cloud, and DevOps platforms">
+                  <div class="stack stack--wordmark stack--light-logo" role="listitem" aria-label="Amazon Web Services" title="Amazon Web Services"><img src="https://upload.wikimedia.org/wikipedia/commons/9/93/Amazon_Web_Services_Logo.svg" alt="" loading="lazy"></div>
+                  <div class="stack stack--wordmark stack--light-logo" role="listitem" aria-label="Microsoft Azure" title="Microsoft Azure"><img src="https://upload.wikimedia.org/wikipedia/commons/a/a8/Microsoft_Azure_Logo.svg" alt="" loading="lazy"></div>
+                  <div class="stack" role="listitem" aria-label="Google Cloud" title="Google Cloud"><img src="https://cdn.simpleicons.org/googlecloud/4285F4" alt="" loading="lazy"></div>
+                  <div class="stack" role="listitem" aria-label="Kubernetes" title="Kubernetes"><img src="https://cdn.simpleicons.org/kubernetes/326CE5" alt="" loading="lazy"></div>
+                  <div class="stack" role="listitem" aria-label="Docker" title="Docker"><img src="https://cdn.simpleicons.org/docker/2496ED" alt="" loading="lazy"></div>
+                  <div class="stack" role="listitem" aria-label="Terraform" title="Terraform"><img src="https://cdn.simpleicons.org/terraform/844FBA" alt="" loading="lazy"></div>
+                  <div class="stack" role="listitem" aria-label="GitHub Actions" title="GitHub Actions"><img src="https://cdn.simpleicons.org/githubactions/2088FF" alt="" loading="lazy"></div>
+                  <div class="stack" role="listitem" aria-label="GitLab" title="GitLab"><img src="https://cdn.simpleicons.org/gitlab/FC6D26" alt="" loading="lazy"></div>
+                  <div class="stack" role="listitem" aria-label="Ansible" title="Ansible"><img src="https://cdn.simpleicons.org/ansible/EE0000" alt="" loading="lazy"></div>
+                  <div class="stack" role="listitem" aria-label="Salesforce" title="Salesforce"><img src="https://boomi.com/wp-content/uploads/Salesforce-Menu-Connector-Cards-Logo-Mark.svg" alt="" loading="lazy"></div>
+                  <div class="stack" role="listitem" aria-label="Boomi" title="Boomi"><img src="https://boomi.com/wp-content/uploads/BoomiMenuLogoIcon.svg" alt="" loading="lazy"></div>
+                  <div class="stack stack--wordmark" role="listitem" aria-label="Oracle NetSuite" title="Oracle NetSuite"><img src="https://www.netsuite.com/portal/assets/img/Oracle-NetSuite-Logo-white.svg" alt="" loading="lazy"></div>
+                  <div class="stack" role="listitem" aria-label="Workday" title="Workday"><img src="https://boomi.com/wp-content/uploads/Workday-Menu-Connector-Cards-Logo-Mark.svg" alt="" loading="lazy"></div>
+                  <div class="stack" role="listitem" aria-label="ServiceNow" title="ServiceNow"><img src="https://boomi.com/wp-content/uploads/servicenow-icon-logo.svg" alt="" loading="lazy"></div>
+                  <div class="stack" role="listitem" aria-label="SAP" title="SAP"><img src="https://cdn.simpleicons.org/sap/0FA6E9" alt="" loading="lazy"></div>
+                  <div class="stack" role="listitem" aria-label="Atlassian" title="Atlassian"><img src="https://cdn.simpleicons.org/atlassian/1868DB" alt="" loading="lazy"></div>
+                  <div class="stack" role="listitem" aria-label="Slack" title="Slack"><img src="https://cdn.jsdelivr.net/npm/simple-icons@15.15.0/icons/slack.svg" alt="" loading="lazy"></div>
+                  <div class="stack" role="listitem" aria-label="Okta" title="Okta"><img src="https://cdn.simpleicons.org/okta/007DC1" alt="" loading="lazy"></div>
+                  <div class="stack" role="listitem" aria-label="HubSpot" title="HubSpot"><img src="https://cdn.simpleicons.org/hubspot/FF7A59" alt="" loading="lazy"></div>
+                  <div class="stack" role="listitem" aria-label="Shopify" title="Shopify"><img src="https://cdn.simpleicons.org/shopify/7AB55C" alt="" loading="lazy"></div>
+                  <div class="stack" role="listitem" aria-label="Zendesk" title="Zendesk"><img src="https://cdn.simpleicons.org/zendesk/03363D" alt="" loading="lazy"></div>
+                  <div class="stack" role="listitem" aria-label="Snowflake" title="Snowflake"><img src="https://cdn.simpleicons.org/snowflake/29B5E8" alt="" loading="lazy"></div>
+                  <div class="stack" role="listitem" aria-label="Databricks" title="Databricks"><img src="https://cdn.simpleicons.org/databricks/FF3621" alt="" loading="lazy"></div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
 
     <!-- SERVICES -->
     <section id="services" class="section container">
-      <h2 class="section-title">Enterprise DevOps & AI Services</h2>
+      <p class="services-eyebrow">Plan · build · secure · operate</p>
+      <h2 class="section-title">Enterprise DevOps, AI &amp; Operations Services</h2>
+      <p class="services-intro">Modernize how software ships, automate the work between enterprise systems, and put AI into production with clear ownership, security controls, and human oversight.</p>
 
       <div class="cards grid-3">
         <article class="card" data-animate>
-          <h3>DevOps Engineering</h3>
-          <p>Design and deliver repeatable CI/CD that scales with your teams.</p>
+          <p class="service-kicker">DELIVERY FOUNDATION</p>
+          <h3>Enterprise CI/CD &amp; Release Engineering</h3>
+          <p>Build reusable pipeline templates with quality gates, change approvals, artifact provenance, progressive rollout, and tested rollback paths.</p>
         </article>
 
         <article class="card" data-animate>
-          <h3>Cloud Architecture</h3>
-          <p>Resilient multi-cloud and hybrid cloud design (AWS / GCP / Azure).</p>
+          <p class="service-kicker">CLOUD &amp; INFRASTRUCTURE</p>
+          <h3>Cloud Architecture &amp; Landing Zones</h3>
+          <p>Design secure AWS, Azure, and Google Cloud foundations across identity, networking, policy, resilience, and workload modernization.</p>
         </article>
 
         <article class="card" data-animate>
-          <h3>AI Automation</h3>
-          <p>Embed LLM agents and AI workflows for observability and automation.</p>
+          <p class="service-kicker">AI &amp; AUTOMATION</p>
+          <h3>AI Agents &amp; Workflow Automation</h3>
+          <p>Connect models, MCP tools, and enterprise APIs to scoped workflows with identity-aware permissions, human approval, retries, and audit trails.</p>
         </article>
 
         <article class="card" data-animate>
-          <h3>AIOps & Observability</h3>
-          <p>Intelligent alerting, anomaly detection and root-cause analysis.</p>
+          <p class="service-kicker">RELIABILITY ENGINEERING</p>
+          <h3>AIOps &amp; Incident Intelligence</h3>
+          <p>Correlate logs, metrics, traces, and changes; improve alert routing and give responders cited, human-reviewed incident context.</p>
         </article>
 
         <article class="card" data-animate>
+          <p class="service-kicker">DEVELOPER EXPERIENCE</p>
           <h3>Platform Engineering</h3>
-          <p>Internal developer platforms to speed delivery and reduce toil.</p>
+          <p>Create self-service workflows, golden paths, reusable templates, and platform guardrails that help teams move independently and safely.</p>
         </article>
 
         <article class="card" data-animate>
-          <h3>DevSecOps & Compliance</h3>
-          <p>Security automation, policy-as-code and continuous compliance.</p>
+          <p class="service-kicker">SECURITY BY DESIGN</p>
+          <h3>DevSecOps &amp; Software Supply Chain</h3>
+          <p>Integrate secrets hygiene, least-privilege access, code and dependency checks, signed artifacts, and policy-as-code into delivery.</p>
         </article>
 
         <article class="card" data-animate>
-          <h3>MLOps</h3>
-          <p>Reproducible model deployments and monitoring for production ML.</p>
+          <p class="service-kicker">PRODUCTION AI</p>
+          <h3>MLOps &amp; LLMOps</h3>
+          <p>Operationalize model and prompt versioning, evaluation, deployment, observability, cost controls, and safe rollback.</p>
         </article>
 
         <article class="card" data-animate>
-          <h3>Infrastructure as Code</h3>
-          <p>Production-ready Terraform modules and IaC best practices.</p>
+          <p class="service-kicker">AUTOMATED INFRASTRUCTURE</p>
+          <h3>Infrastructure as Code &amp; GitOps</h3>
+          <p>Standardize Terraform and Pulumi modules, environment provisioning, policy checks, drift detection, and reviewed infrastructure changes.</p>
         </article>
 
         <article class="card" data-animate>
-          <h3>FinOps</h3>
-          <p>Cloud cost optimization and resource efficiency engineering.</p>
+          <p class="service-kicker">COST &amp; PERFORMANCE</p>
+          <h3>FinOps &amp; Cloud Reliability</h3>
+          <p>Improve cost visibility, capacity planning, right-sizing, resilience, and service-level reporting without losing sight of workload needs.</p>
+        </article>
+
+        <article class="card" data-animate>
+          <p class="service-kicker">ENTERPRISE SYSTEMS</p>
+          <h3>Enterprise Tools DevOps &amp; Operations Automation</h3>
+          <p>Coordinate release, configuration, integration, access, and support workflows across business-critical SaaS and enterprise platforms.</p>
+        </article>
+
+        <article class="card" data-animate>
+          <p class="service-kicker">CONTROL REMEDIATION</p>
+          <h3>U.S. SOX Finding Remediation</h3>
+          <p>Implement client-approved fixes for identified control findings, including access, change-management, and evidence workflows. DopsMind does not perform audits or issue opinions.</p>
+        </article>
+
+        <article class="card" data-animate>
+          <p class="service-kicker">RESPONSIBLE AI</p>
+          <h3>AI Readiness &amp; Guardrails</h3>
+          <p>Assess use cases, data access, and risk; define evaluations, monitoring, escalation paths, and human control before scaling AI workflows.</p>
         </article>
       </div>
     </section>
 
-    <!-- CASE STUDIES -->
-    <section id="case-studies" class="section dark">
+    <!-- DELIVERY APPROACH -->
+    <section id="approach" class="section container">
+      <div class="approach-heading">
+        <p class="eyebrow">A practical path to production</p>
+        <h2 class="section-title">Start small. Prove value. Operate with confidence.</h2>
+        <p class="muted">A clear engagement from first assessment through ongoing improvement—shaped around your team and systems.</p>
+      </div>
+
+      <div class="delivery-steps grid-3 cards">
+        <article class="delivery-step card" data-animate>
+          <span class="step-index">01 <span>DISCOVER</span></span>
+          <h3>Find the right first move</h3>
+          <p>Review your architecture, delivery workflow, reliability, security, and AI readiness.</p>
+          <ul>
+            <li>Prioritized roadmap</li>
+            <li>Risks and dependencies</li>
+            <li>Success measures to agree together</li>
+          </ul>
+        </article>
+
+        <article class="delivery-step card" data-animate>
+          <span class="step-index">02 <span>BUILD</span></span>
+          <h3>Ship a useful slice</h3>
+          <p>Deliver a focused platform, automation, or AI workflow alongside your engineers.</p>
+          <ul>
+            <li>Working code and infrastructure</li>
+            <li>Security and human-review controls</li>
+            <li>Runbooks and team handoff</li>
+          </ul>
+        </article>
+
+        <article class="delivery-step card" data-animate>
+          <span class="step-index">03 <span>OPERATE</span></span>
+          <h3>Improve what is live</h3>
+          <p>Use production signals to improve reliability, cost, developer experience, and AI quality.</p>
+          <ul>
+            <li>Observability and incident practices</li>
+            <li>Service and model quality reviews</li>
+            <li>Continuous optimization backlog</li>
+          </ul>
+        </article>
+      </div>
+      <div class="approach-cta"><a class="btn ghost" href="#contact">Talk through a roadmap</a></div>
+    </section>
+
+    <!-- ENTERPRISE DELIVERY BLUEPRINTS -->
+    <section id="case-studies" class="section dark domain-section">
       <div class="container">
-        <h2 class="section-title">Selected Case Studies</h2>
+        <h2 class="section-title">Enterprise Delivery Blueprints</h2>
+        <p class="case-disclaimer">These are solution blueprints, not client case studies. They describe possible delivery approaches; no completed engagement, customer, or outcome is claimed.</p>
 
         <div class="grid-3 cards">
           <div class="case card" data-animate>
             <div class="case-inner">
-              <h3>AI Log Intelligence</h3>
-              <p class="muted">Problem — noisy alerts and long MTTR</p>
-              <p>We integrated log parsing pipelines + LLM summarization. Result: 60% faster incident detection and 50% lower noise.</p>
-              <p class="case-meta">Technologies: ELK, OpenAI, Prometheus</p>
+              <p class="scenario-badge">DELIVERY ENGINEERING · CI/CD</p>
+              <h3>A governed CI/CD platform for enterprise teams</h3>
+              <p><strong>Challenge:</strong> Separate pipelines and release procedures can make changes inconsistent, risky, and difficult to trace.</p>
+              <p><strong>Blueprint:</strong> Reusable pipelines with short-lived cloud identity, artifact provenance, security and policy checks, environment approvals, progressive delivery, and tested rollback.</p>
+              <p class="case-result"><strong>Focus:</strong> A paved road to production that preserves accountable approvals, traceable changes, and service-specific release controls.</p>
             </div>
           </div>
 
           <div class="case card" data-animate>
             <div class="case-inner">
-              <h3>CI/CD Automation</h3>
-              <p class="muted">Problem — slow and brittle deployments</p>
-              <p>Built standardized, templated pipelines + automated checks. Result: median deployment time reduced from 30 → 5 minutes.</p>
-              <p class="case-meta">Technologies: GitHub Actions, Terraform, Kubernetes</p>
+              <p class="scenario-badge">AI OPERATIONS · INCIDENT RESPONSE</p>
+              <h3>An incident response copilot with human control</h3>
+              <p><strong>Challenge:</strong> Responders need to correlate alerts, telemetry, recent changes, and runbooks across disconnected systems.</p>
+              <p><strong>Blueprint:</strong> A permission-aware assistant retrieves approved operational context, summarizes likely causes with citations, and proposes runbook steps. Production-changing actions remain behind explicit human approval.</p>
+              <p class="case-result"><strong>Focus:</strong> Traceable recommendations, repeatable model and prompt evaluation, and clear escalation paths.</p>
             </div>
           </div>
 
           <div class="case card" data-animate>
             <div class="case-inner">
-              <h3>Cloud Scaling System</h3>
-              <p class="muted">Problem — frequent capacity issues during spikes</p>
-              <p>Implemented predictive auto-scaling with cost-aware policies. Result: handled 10x traffic spikes with 20% cost savings.</p>
-              <p class="case-meta">Technologies: AWS AutoScaling, Prometheus, Python</p>
+              <p class="scenario-badge">CONTROL REMEDIATION · U.S. SOX</p>
+              <h3>Closing SOX control findings with automation</h3>
+              <p><strong>Challenge:</strong> Manual access reviews, change records, and evidence collection can slow remediation of identified control findings.</p>
+              <p><strong>Blueprint:</strong> Implement client-approved fixes that reconcile identity and HR data, route exceptions to control owners, preserve approvals and change history, and assemble evidence for review.</p>
+              <p class="case-result"><strong>Scope boundary:</strong> DopsMind implements remediation; the client’s internal or external auditors perform audit procedures, testing, and opinions.</p>
             </div>
           </div>
+
         </div>
       </div>
     </section>
 
-    <!-- METRICS -->
+    <!-- OUTCOME MEASURES -->
     <section id="metrics" class="section container">
-      <h2 class="section-title">Impact at a glance</h2>
+      <h2 class="section-title">Outcome Measures</h2>
+      <p class="metrics-disclaimer">We agree baselines and targets with each client, then report against production evidence. The measures below are options to select based on the engagement—not claims of achieved results.</p>
 
-      <div class="metrics grid-4">
+      <div class="metrics grid-3">
         <div class="metric" data-animate>
-          <div class="metric-value" data-count="10">0</div>
-          <div class="metric-label">Years experience</div>
+          <span class="metric-category">DELIVERY</span>
+          <h3 class="measure-title">CI/CD flow</h3>
+          <p class="metric-label">Deployment lead time, deployment frequency, change failure rate, and rollback rate.</p>
         </div>
 
         <div class="metric" data-animate>
-          <div class="metric-value" data-count="99.9">0</div>
-          <div class="metric-label">% uptime (typical)</div>
+          <span class="metric-category">RELIABILITY</span>
+          <h3 class="measure-title">Service health</h3>
+          <p class="metric-label">SLO attainment, time to detect, time to restore, and recurring incident rate.</p>
         </div>
 
         <div class="metric" data-animate>
-          <div class="metric-value" data-count="60">0</div>
-          <div class="metric-label">% faster MTTR</div>
+          <span class="metric-category">AI QUALITY</span>
+          <h3 class="measure-title">AI workflow quality</h3>
+          <p class="metric-label">Task success, citation correctness, escalation rate, latency, and cost per task.</p>
         </div>
 
         <div class="metric" data-animate>
-          <div class="metric-value" data-count="10">0</div>
-          <div class="metric-label">x scale in spikes</div>
+          <span class="metric-category">CONTROL REMEDIATION</span>
+          <h3 class="measure-title">SOX remediation progress</h3>
+          <p class="metric-label">Aging of agreed remediation actions, control-owner approvals, and evidence completeness.</p>
+        </div>
+
+        <div class="metric" data-animate>
+          <span class="metric-category">CLOUD ECONOMICS</span>
+          <h3 class="measure-title">FinOps</h3>
+          <p class="metric-label">Cost per workload or transaction, budget variance, utilization, and avoidable spend.</p>
+        </div>
+
+        <div class="metric" data-animate>
+          <span class="metric-category">PLATFORM ENGINEERING</span>
+          <h3 class="measure-title">Developer experience</h3>
+          <p class="metric-label">Self-service adoption, setup time, paved-road usage, and developer feedback.</p>
         </div>
       </div>
+
     </section>
 
     <!-- CONTACT (premium CTA) -->
@@ -204,7 +390,7 @@
         <div class="cta-card" data-animate>
           <h2>Let’s build your platform</h2>
           <p class="muted">We work with engineering and platform teams to deliver production-grade systems — fast.</p>
-          <a class="btn primary big" href="mailto:your@email.com">Contact Us</a>
+          <a class="btn primary big" href="mailto:dopsmind@gmail.com">Contact Us</a>
         </div>
       </div>
     </section>
@@ -215,6 +401,7 @@
       <div class="footer-inner">
         <div>© 2026 DopsMind Labs</div>
         <div class="muted">Built with care · DevOps · AI</div>
+        <a class="footer-link" href="https://www.linkedin.com/company/dopsmind-labs/?lipi=urn%3Ali%3Apage%3Ad_flagship3_search_srp_companies%3BwOJSIqjKQyy5EvyH1aqVVg%3D%3D" target="_blank" rel="noreferrer" aria-label="DopsMind Labs on LinkedIn">LinkedIn</a>
       </div>
     </div>
   </footer>
