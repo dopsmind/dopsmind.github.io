@@ -1,4 +1,3 @@
-// HERO typed headline
 document.addEventListener('DOMContentLoaded', function(){
   document.querySelectorAll('.stack-marquee-track').forEach(track=>{
     const group = track.querySelector('.stack-marquee-group');
@@ -8,20 +7,6 @@ document.addEventListener('DOMContentLoaded', function(){
       track.appendChild(clone);
     }
   });
-
-  try {
-    new Typed('#typed', {
-      strings: ['Cloud Platforms', 'AI-Driven DevOps', 'Automation Engines', 'Scalable Infrastructure'],
-      typeSpeed: 60,
-      backSpeed: 40,
-      backDelay: 1100,
-      startDelay: 300,
-      loop: true
-    });
-  } catch(e){
-    // typed failed, silently continue
-    console.warn('typed.js failed', e);
-  }
 
   // small animate-on-scroll utility (no external dependency)
   const io = new IntersectionObserver((entries)=>{
@@ -86,6 +71,63 @@ document.addEventListener('DOMContentLoaded', function(){
       const open = nav.style.display === 'flex';
       nav.style.display = open ? 'none' : 'flex';
       toggle.setAttribute('aria-expanded', String(!open));
+    });
+  }
+
+  const inquiryForm = document.querySelector('#project-inquiry');
+  if(inquiryForm){
+    const status = document.querySelector('#inquiry-status');
+    const submitButton = inquiryForm.querySelector('[type="submit"]');
+    const originalButtonText = submitButton.textContent.trim();
+
+    inquiryForm.addEventListener('submit', async event=>{
+      event.preventDefault();
+      if(!inquiryForm.reportValidity()) return;
+
+      status.hidden = false;
+      status.classList.remove('is-error', 'is-success');
+
+      // Silently discard likely bot submissions caught by the off-screen honeypot.
+      if(inquiryForm.elements._honey.value){
+        status.textContent = 'Thanks—your inquiry has been received.';
+        status.classList.add('is-success');
+        inquiryForm.reset();
+        status.focus();
+        return;
+      }
+
+      submitButton.disabled = true;
+      submitButton.textContent = 'Sending…';
+      inquiryForm.setAttribute('aria-busy', 'true');
+      status.textContent = 'Sending your inquiry securely…';
+
+      try{
+        const payload = Object.fromEntries(new FormData(inquiryForm).entries());
+        const response = await fetch('https://formsubmit.co/ajax/dopsmind@gmail.com', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+            'Accept': 'application/json'
+          },
+          body: JSON.stringify(payload)
+        });
+        const result = await response.json();
+        if(!response.ok || result.success === false || result.success === 'false' || result.success === '0'){
+          throw new Error('The inquiry service did not accept the submission.');
+        }
+
+        status.textContent = 'Thanks—your inquiry was sent. We’ll be in touch.';
+        status.classList.add('is-success');
+        inquiryForm.reset();
+      }catch(error){
+        status.textContent = 'We couldn’t send your inquiry just now. Please email dopsmind@gmail.com or connect with us on LinkedIn.';
+        status.classList.add('is-error');
+      }finally{
+        submitButton.disabled = false;
+        submitButton.textContent = originalButtonText;
+        inquiryForm.removeAttribute('aria-busy');
+        status.focus();
+      }
     });
   }
 });
